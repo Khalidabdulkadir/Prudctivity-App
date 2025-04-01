@@ -1,0 +1,61 @@
+.event-form {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.event-form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.event-form input,
+.event-form input[type="datetime-local"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+.event-form input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+  outline: none;
+}
+
+.event-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: white;
+  border-radius: var(--radius);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.event-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .event-form {
+    padding: 1rem;
+  }
+
+  .event-form input,
+  .event-form input[type="datetime-local"] {
+    font-size: 0.95rem;
+  }
+}

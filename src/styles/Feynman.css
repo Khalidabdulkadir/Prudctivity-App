@@ -1,0 +1,272 @@
+.feynman-container {
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.feynman-layout {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .feynman-layout {
+    grid-template-columns: 1fr 400px;
+  }
+}
+
+.feynman-main {
+  min-width: 0;
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+  outline: none;
+}
+
+.topics-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feynman-topic {
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.feynman-topic:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.topic-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.topic-section {
+  margin-bottom: 1.5rem;
+}
+
+.topic-section h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.topic-section p {
+  color: var(--text-light);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.topic-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.topic-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.delete-btn {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
+/* Form Styles */
+.feynman-form {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.feynman-form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: white;
+  border-radius: var(--radius);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.save-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.cancel-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.info-card {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.info-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.info-card ol {
+  color: var(--text-light);
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.info-card li {
+  margin-bottom: 0.5rem;
+}
+
+.no-topics {
+  text-align: center;
+  color: var(--text-light);
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  border-radius: var(--radius);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .feynman-container {
+    padding: 1rem;
+  }
+
+  .feynman-topic {
+    padding: 1rem;
+  }
+
+  .topic-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .topic-section h4 {
+    font-size: 0.95rem;
+  }
+
+  .topic-actions {
+    flex-direction: column;
+  }
+
+  .topic-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .feynman-form {
+    padding: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+  }
+
+  .info-card {
+    padding: 1rem;
+  }
+}

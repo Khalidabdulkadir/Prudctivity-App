@@ -1,0 +1,109 @@
+.pomodoro-timer {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timer-modes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mode-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.mode-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.timer-display {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.progress-ring {
+  position: relative;
+  color: var(--primary-color);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-ring-circle-bg {
+  stroke: #e5e7eb;
+}
+
+.timer-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  fill: var(--text-color);
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.control-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: white;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .timer-text {
+    font-size: 2rem;
+  }
+
+  .mode-btn,
+  .control-btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-modes {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timer-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mode-btn,
+  .control-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .timer-text {
+    font-size: 1.75rem;
+  }
+}

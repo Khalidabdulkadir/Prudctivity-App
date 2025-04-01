@@ -1,0 +1,133 @@
+.task-item {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  display: grid;
+  gap: 1rem;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.task-checkbox:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.task-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+}
+
+.task-title {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.task-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.task-category,
+.task-priority {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.task-category {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.task-priority {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.task-priority.high {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.task-priority.medium {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.task-priority.low {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.task-content {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.task-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: translateY(-1px);
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-light);
+}
